@@ -21,6 +21,7 @@ public class koneksiDB {
     private static final Properties prop = new Properties();  
     private static final MysqlDataSource dataSource=new MysqlDataSource();
     private static String var="";
+
     
     public koneksiDB(){} 
     public static Connection condb(){ 
@@ -1329,6 +1330,16 @@ public class koneksiDB {
         try{
             prop.loadFromXML(new FileInputStream("setting/database.xml"));
             var=EnkripsiAES.decrypt(prop.getProperty("USERKEYAPISMARTCLAIM"));
+        }catch(Exception e){
+            var=""; 
+        }
+        return var;
+    }
+    
+    public static String ENABLEDPASIENEDIT(){
+        try{
+            prop.loadFromXML(new FileInputStream("setting/database.xml"));
+            var=prop.getProperty("ENABLEDPASIENEDIT");
         }catch(Exception e){
             var=""; 
         }
