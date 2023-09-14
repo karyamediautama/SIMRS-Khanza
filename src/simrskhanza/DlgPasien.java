@@ -4747,6 +4747,10 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
             Valid.textKosong(nmpangkatpolri,"Pangkat POLRI");
         }else if((chkPolri.isSelected()==true)&&nmjabatanpolri.getText().trim().equals("")){
             Valid.textKosong(nmjabatanpolri,"Jabatan POLRI");
+        }else if (this.Sequel.cariIsi("select no_ktp from pasien where no_ktp='" + this.TKtp.getText() + "'").equals(this.TKtp.getText().toString())) {
+            JOptionPane.showMessageDialog(null, "Mohon maaf, Nomor NIK Sudah terdaftar..");
+            this.TCari.requestFocus();
+            this.emptTeks();
         }else{
             if(Kelurahan.isEditable()==true){
                 Sequel.queryu4("insert ignore into kelurahan values(?,?)",2,new String[]{"0",Kelurahan.getText()});
