@@ -200,18 +200,19 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tbRalanParamedis.setDefaultRenderer(Object.class, new WarnaTable());
         
         tabModeRalanDokterParamedis=new DefaultTableModel(null,new Object[]{
-            "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Tnd","Perawatan/Tindakan","Kode Dokter",
+            "No.","No.Rawat","No.R.M.","No. SEP","Nama Pasien","Kd.Tnd","Perawatan/Tindakan","Kode Dokter",
             "Dokter Yg Menangani","NIP","Paramedis Yg Menangani","Tanggal","Jam","Cara Bayar","Ruangan",
             "Jasa Sarana","Paket BHP","JM Dokter","JM Paramedis","KSO","Menejemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
-                 java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
+                 java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Double.class,
                  java.lang.Double.class,java.lang.Double.class,java.lang.Double.class,
-                 java.lang.Double.class,java.lang.Double.class,java.lang.Double.class
+                 java.lang.Double.class,java.lang.Double.class,java.lang.Double.class,
+                 
              };
              @Override
              public Class getColumnClass(int columnIndex) {
@@ -222,7 +223,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tbRalanDokterParamedis.setPreferredScrollableViewportSize(new Dimension(500,500));
         tbRalanDokterParamedis.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        for (i = 0; i < 21; i++) {
+        for (i = 0; i < 22; i++) {
             TableColumn column = tbRalanDokterParamedis.getColumnModel().getColumn(i);
             if(i==0){
                 column.setPreferredWidth(30);
@@ -265,6 +266,8 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else if(i==19){
                 column.setPreferredWidth(75);
             }else if(i==20){
+                column.setPreferredWidth(80);
+            }else if(i==21){
                 column.setPreferredWidth(80);
             }
         }
@@ -470,12 +473,12 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tbRanapDokterParamedis.setDefaultRenderer(Object.class, new WarnaTable());
         
         tabModeRadiologi=new DefaultTableModel(null,new Object[]{
-            "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Prk","Pemeriksaan","Kode P.J.",
+            "No.","No.Rawat","No.R.M.","No. SEP","Nama Pasien","Kd.Prk","Pemeriksaan","Kode P.J.",
             "Dokter P.J.Rad","NIP","Petugas Rad","Kode Perujuk","Dokter Perujuk","Tanggal","Jam","Cara Bayar","Ruangan",
             "Jasa Sarana","Paket BHP","JM P.J.Rad","JM Petugas","JM Perujuk","KSO","Menejemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
-                 java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
+                 java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -493,7 +496,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tbRadiologi.setPreferredScrollableViewportSize(new Dimension(500,500));
         tbRadiologi.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        for (i = 0; i < 24; i++) {
+        for (i = 0; i < 25; i++) {
             TableColumn column = tbRadiologi.getColumnModel().getColumn(i);
             if(i==0){
                 column.setPreferredWidth(30);
@@ -502,33 +505,33 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else if(i==2){
                 column.setPreferredWidth(70);
             }else if(i==3){
-                column.setPreferredWidth(150);
-            }else if(i==4){
-                column.setPreferredWidth(75);
-            }else if(i==5){
-                column.setPreferredWidth(200);
-            }else if(i==6){
-                column.setPreferredWidth(75);
-            }else if(i==7){
-                column.setPreferredWidth(150);
-            }else if(i==8){
-                column.setPreferredWidth(75);
-            }else if(i==9){
-                column.setPreferredWidth(150);
-            }else if(i==10){
-                column.setPreferredWidth(75);
-            }else if(i==11){
-                column.setPreferredWidth(150);
-            }else if(i==12){
                 column.setPreferredWidth(70);
-            }else if(i==13){
-                column.setPreferredWidth(55);
-            }else if(i==14){
-                column.setPreferredWidth(110);
-            }else if(i==15){
-                column.setPreferredWidth(130);
-            }else if(i==16){
+            }else if(i==4){
+                column.setPreferredWidth(150);
+            }else if(i==5){
                 column.setPreferredWidth(75);
+            }else if(i==6){
+                column.setPreferredWidth(200);
+            }else if(i==7){
+                column.setPreferredWidth(75);
+            }else if(i==8){
+                column.setPreferredWidth(150);
+            }else if(i==9){
+                column.setPreferredWidth(75);
+            }else if(i==10){
+                column.setPreferredWidth(150);
+            }else if(i==11){
+                column.setPreferredWidth(75);
+            }else if(i==12){
+                column.setPreferredWidth(150);
+            }else if(i==13){
+                column.setPreferredWidth(70);
+            }else if(i==14){
+                column.setPreferredWidth(55);
+            }else if(i==15){
+                column.setPreferredWidth(110);
+            }else if(i==16){
+                column.setPreferredWidth(130);
             }else if(i==17){
                 column.setPreferredWidth(75);
             }else if(i==18){
@@ -542,18 +545,20 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else if(i==22){
                 column.setPreferredWidth(75);
             }else if(i==23){
+                column.setPreferredWidth(75);
+            }else if(i==24){
                 column.setPreferredWidth(80);
             }
         }
         tbRadiologi.setDefaultRenderer(Object.class, new WarnaTable());
         
         tabModeLaborat=new DefaultTableModel(null,new Object[]{
-            "No.","No.Rawat","No.R.M.","Nama Pasien","Kd.Prk","Pemeriksaan","Kode P.J.",
+            "No.","No.Rawat","No.R.M.","No. SEP","Nama Pasien","Kd.Prk","Pemeriksaan","Kode P.J.",
             "Dokter P.J.Lab","NIP","Petugas Lab","Kode Perujuk","Dokter Perujuk","Tanggal","Jam","Cara Bayar","Ruangan",
             "Jasa Sarana","Paket BHP","JM P.J.Lab","JM Petugas","JM Perujuk","KSO","Menejemen","Total"}){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
-                 java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
+                 java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
@@ -571,7 +576,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tbLaborat.setPreferredScrollableViewportSize(new Dimension(500,500));
         tbLaborat.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        for (i = 0; i < 24; i++) {
+        for (i = 0; i < 25; i++) {
             TableColumn column = tbLaborat.getColumnModel().getColumn(i);
             if(i==0){
                 column.setPreferredWidth(30);
@@ -580,33 +585,33 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else if(i==2){
                 column.setPreferredWidth(70);
             }else if(i==3){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(100);
             }else if(i==4){
-                column.setPreferredWidth(75);
+                column.setPreferredWidth(150);
             }else if(i==5){
-                column.setPreferredWidth(200);
+                column.setPreferredWidth(75);
             }else if(i==6){
-                column.setPreferredWidth(75);
+                column.setPreferredWidth(200);
             }else if(i==7){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(75);
             }else if(i==8){
-                column.setPreferredWidth(75);
+                column.setPreferredWidth(150);
             }else if(i==9){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(75);
             }else if(i==10){
-                column.setPreferredWidth(75);
-            }else if(i==11){
                 column.setPreferredWidth(150);
-            }else if(i==12){
-                column.setPreferredWidth(70);
-            }else if(i==13){
-                column.setPreferredWidth(55);
-            }else if(i==14){
-                column.setPreferredWidth(110);
-            }else if(i==15){
-                column.setPreferredWidth(130);
-            }else if(i==16){
+            }else if(i==11){
                 column.setPreferredWidth(75);
+            }else if(i==12){
+                column.setPreferredWidth(150);
+            }else if(i==13){
+                column.setPreferredWidth(70);
+            }else if(i==14){
+                column.setPreferredWidth(55);
+            }else if(i==15){
+                column.setPreferredWidth(110);
+            }else if(i==16){
+                column.setPreferredWidth(130);
             }else if(i==17){
                 column.setPreferredWidth(75);
             }else if(i==18){
@@ -620,6 +625,8 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else if(i==22){
                 column.setPreferredWidth(75);
             }else if(i==23){
+                column.setPreferredWidth(75);
+            }else if(i==24){
                 column.setPreferredWidth(80);
             }
         }
@@ -704,7 +711,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tbDetailLaborat.setDefaultRenderer(Object.class, new WarnaTable());
         
         tabModeOperasi=new DefaultTableModel(null,new Object[]{
-            "No.","No.Rawat","No.R.M.","Nama Pasien","Kode Paket",
+            "No.","No.Rawat","No.R.M.","No. SEP","Nama Pasien","Kode Paket",
             "Paket Operasi/VK","Tanggal","Jam","Cara Bayar","Ruangan",
             "Operator 1","JM Operator 1","Operator 2","JM Operator 2",
             "Operator 3","JM Operator 3", "Asisten Operator 1","JM AO 1",
@@ -720,7 +727,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         }){
              @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
              Class[] types = new Class[] {
-                 java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
+                 java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,
                  java.lang.Object.class,java.lang.Object.class,java.lang.Double.class,
@@ -751,7 +758,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         tbOperasi.setPreferredScrollableViewportSize(new Dimension(500,500));
         tbOperasi.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        for (i = 0; i < 62; i++) {
+        for (i = 0; i < 63; i++) {
             TableColumn column = tbOperasi.getColumnModel().getColumn(i);
             if(i==0){
                 column.setPreferredWidth(30);
@@ -760,111 +767,111 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else if(i==2){
                 column.setPreferredWidth(70);
             }else if(i==3){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(100);
             }else if(i==4){
-                column.setPreferredWidth(70);
-            }else if(i==5){
                 column.setPreferredWidth(150);
+            }else if(i==5){
+                column.setPreferredWidth(70);
             }else if(i==6){
-                column.setPreferredWidth(75);
+                column.setPreferredWidth(150);
             }else if(i==7){
-                column.setPreferredWidth(55);
+                column.setPreferredWidth(75);
             }else if(i==8){
-                column.setPreferredWidth(120);
+                column.setPreferredWidth(55);
             }else if(i==9){
                 column.setPreferredWidth(120);
             }else if(i==10){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(120);
             }else if(i==11){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==12){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==13){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==14){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==15){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==16){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==17){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==18){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==19){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==20){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==21){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==22){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==23){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==24){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==25){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==26){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==27){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==28){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==29){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==30){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==31){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==32){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==33){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==34){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==35){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==36){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==37){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==38){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==39){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==40){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==41){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==42){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==43){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==44){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==45){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==46){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==47){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==48){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==49){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==50){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==51){
-                column.setPreferredWidth(80);
+                column.setPreferredWidth(150);
             }else if(i==52){
-                column.setPreferredWidth(150);
+                column.setPreferredWidth(80);
             }else if(i==53){
-                column.setPreferredWidth(80);
-            }else if(i==54){
                 column.setPreferredWidth(150);
-            }else if(i==55){
+            }else if(i==54){
                 column.setPreferredWidth(80);
+            }else if(i==55){
+                column.setPreferredWidth(150);
             }else if(i==56){
                 column.setPreferredWidth(80);
             }else if(i==57){
@@ -876,6 +883,8 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else if(i==60){
                 column.setPreferredWidth(80);
             }else if(i==61){
+                column.setPreferredWidth(80);
+            }else if(i==62){
                 column.setPreferredWidth(100);
             }
         }
@@ -3998,13 +4007,14 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             if(KdDokterRalanDokterParamedis.getText().equals("")&&NmDokterRalanDokterParamedis.getText().equals("")&&KdPetugasRalanDokterParamedis.getText().equals("")&&NmPetugasRalanDokterParamedis.getText().equals("")&&KdPoliRalanDokterParamedis.getText().equals("")&&NmPoliRalanDokterParamedis.getText().equals("")&&KdCaraBayarRalanDokterParamedis.getText().equals("")&&NmCaraBayarRalanDokterParamedis.getText().equals("")&&TCari.getText().equals("")&&cmbStatus.getSelectedItem().equals("Semua")){
                 ps=koneksi.prepareStatement(
                        "select rawat_jl_drpr.no_rawat,reg_periksa.no_rkm_medis,"+
-                       "pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
+                       "bridging_sep.no_sep,pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
                        "rawat_jl_drpr.kd_dokter,dokter.nm_dokter,rawat_jl_drpr.nip,petugas.nama,rawat_jl_drpr.tgl_perawatan,"+
                        "rawat_jl_drpr.jam_rawat,penjab.png_jawab,poliklinik.nm_poli, " +
                        "rawat_jl_drpr.material,rawat_jl_drpr.bhp,rawat_jl_drpr.tarif_tindakandr,rawat_jl_drpr.tarif_tindakanpr,"+
                        "rawat_jl_drpr.kso,rawat_jl_drpr.menejemen,rawat_jl_drpr.biaya_rawat "+
                        "from pasien inner join reg_periksa on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                        "inner join rawat_jl_drpr on rawat_jl_drpr.no_rawat=reg_periksa.no_rawat "+
+                       "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                        "inner join jns_perawatan on rawat_jl_drpr.kd_jenis_prw=jns_perawatan.kd_jenis_prw "+
                        "inner join dokter on rawat_jl_drpr.kd_dokter=dokter.kd_dokter "+
                        "inner join poliklinik on reg_periksa.kd_poli=poliklinik.kd_poli "+
@@ -4015,13 +4025,14 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                 if(cmbStatus.getSelectedItem().equals("Semua")){
                     ps=koneksi.prepareStatement(
                            "select rawat_jl_drpr.no_rawat,reg_periksa.no_rkm_medis,"+
-                           "pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
+                           "bridging_sep.no_sep,pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
                            "rawat_jl_drpr.kd_dokter,dokter.nm_dokter,rawat_jl_drpr.nip,petugas.nama,rawat_jl_drpr.tgl_perawatan,"+
                            "rawat_jl_drpr.jam_rawat,penjab.png_jawab,poliklinik.nm_poli, " +
                            "rawat_jl_drpr.material,rawat_jl_drpr.bhp,rawat_jl_drpr.tarif_tindakandr,rawat_jl_drpr.tarif_tindakanpr,"+
                            "rawat_jl_drpr.kso,rawat_jl_drpr.menejemen,rawat_jl_drpr.biaya_rawat "+
                            "from pasien inner join reg_periksa on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                            "inner join rawat_jl_drpr on rawat_jl_drpr.no_rawat=reg_periksa.no_rawat "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join jns_perawatan on rawat_jl_drpr.kd_jenis_prw=jns_perawatan.kd_jenis_prw "+
                            "inner join dokter on rawat_jl_drpr.kd_dokter=dokter.kd_dokter "+
                            "inner join poliklinik on reg_periksa.kd_poli=poliklinik.kd_poli "+
@@ -4041,13 +4052,14 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                 }else if(cmbStatus.getSelectedItem().equals("Piutang Belum Lunas")){
                     ps=koneksi.prepareStatement(
                            "select rawat_jl_drpr.no_rawat,reg_periksa.no_rkm_medis,"+
-                           "pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
+                           "bridging_sep.no_sep,pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
                            "rawat_jl_drpr.kd_dokter,dokter.nm_dokter,rawat_jl_drpr.nip,petugas.nama,rawat_jl_drpr.tgl_perawatan,"+
                            "rawat_jl_drpr.jam_rawat,penjab.png_jawab,poliklinik.nm_poli, " +
                            "rawat_jl_drpr.material,rawat_jl_drpr.bhp,rawat_jl_drpr.tarif_tindakandr,rawat_jl_drpr.tarif_tindakanpr,"+
                            "rawat_jl_drpr.kso,rawat_jl_drpr.menejemen,rawat_jl_drpr.biaya_rawat "+
                            "from pasien inner join reg_periksa on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                            "inner join rawat_jl_drpr on rawat_jl_drpr.no_rawat=reg_periksa.no_rawat "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join jns_perawatan on rawat_jl_drpr.kd_jenis_prw=jns_perawatan.kd_jenis_prw "+
                            "inner join dokter on rawat_jl_drpr.kd_dokter=dokter.kd_dokter "+
                            "inner join poliklinik on reg_periksa.kd_poli=poliklinik.kd_poli "+
@@ -4068,13 +4080,14 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                 }else if(cmbStatus.getSelectedItem().equals("Piutang Sudah Lunas")){
                     ps=koneksi.prepareStatement(
                            "select rawat_jl_drpr.no_rawat,reg_periksa.no_rkm_medis,"+
-                           "pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
+                           "bridging_sep.no_sep,pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
                            "rawat_jl_drpr.kd_dokter,dokter.nm_dokter,rawat_jl_drpr.nip,petugas.nama,rawat_jl_drpr.tgl_perawatan,"+
                            "rawat_jl_drpr.jam_rawat,penjab.png_jawab,poliklinik.nm_poli, " +
                            "rawat_jl_drpr.material,rawat_jl_drpr.bhp,rawat_jl_drpr.tarif_tindakandr,rawat_jl_drpr.tarif_tindakanpr,"+
                            "rawat_jl_drpr.kso,rawat_jl_drpr.menejemen,rawat_jl_drpr.biaya_rawat "+
                            "from pasien inner join reg_periksa on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                            "inner join rawat_jl_drpr on rawat_jl_drpr.no_rawat=reg_periksa.no_rawat "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join jns_perawatan on rawat_jl_drpr.kd_jenis_prw=jns_perawatan.kd_jenis_prw "+
                            "inner join dokter on rawat_jl_drpr.kd_dokter=dokter.kd_dokter "+
                            "inner join poliklinik on reg_periksa.kd_poli=poliklinik.kd_poli "+
@@ -4095,13 +4108,14 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                 }else if(cmbStatus.getSelectedItem().equals("Sudah Bayar Non Piutang")){
                     ps=koneksi.prepareStatement(
                            "select rawat_jl_drpr.no_rawat,reg_periksa.no_rkm_medis,"+
-                           "pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
+                           "bridging_sep.no_sep,pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
                            "rawat_jl_drpr.kd_dokter,dokter.nm_dokter,rawat_jl_drpr.nip,petugas.nama,rawat_jl_drpr.tgl_perawatan,"+
                            "rawat_jl_drpr.jam_rawat,penjab.png_jawab,poliklinik.nm_poli, " +
                            "rawat_jl_drpr.material,rawat_jl_drpr.bhp,rawat_jl_drpr.tarif_tindakandr,rawat_jl_drpr.tarif_tindakanpr,"+
                            "rawat_jl_drpr.kso,rawat_jl_drpr.menejemen,rawat_jl_drpr.biaya_rawat "+
                            "from pasien inner join reg_periksa on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                            "inner join rawat_jl_drpr on rawat_jl_drpr.no_rawat=reg_periksa.no_rawat "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join jns_perawatan on rawat_jl_drpr.kd_jenis_prw=jns_perawatan.kd_jenis_prw "+
                            "inner join dokter on rawat_jl_drpr.kd_dokter=dokter.kd_dokter "+
                            "inner join poliklinik on reg_periksa.kd_poli=poliklinik.kd_poli "+
@@ -4121,13 +4135,14 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                 }else if(cmbStatus.getSelectedItem().equals("Belum Terclosing Kasir")){
                     ps=koneksi.prepareStatement(
                            "select rawat_jl_drpr.no_rawat,reg_periksa.no_rkm_medis,"+
-                           "pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
+                           "bridging_sep.no_sep,pasien.nm_pasien,rawat_jl_drpr.kd_jenis_prw,jns_perawatan.nm_perawatan,"+
                            "rawat_jl_drpr.kd_dokter,dokter.nm_dokter,rawat_jl_drpr.nip,petugas.nama,rawat_jl_drpr.tgl_perawatan,"+
                            "rawat_jl_drpr.jam_rawat,penjab.png_jawab,poliklinik.nm_poli, " +
                            "rawat_jl_drpr.material,rawat_jl_drpr.bhp,rawat_jl_drpr.tarif_tindakandr,rawat_jl_drpr.tarif_tindakanpr,"+
                            "rawat_jl_drpr.kso,rawat_jl_drpr.menejemen,rawat_jl_drpr.biaya_rawat "+
                            "from pasien inner join reg_periksa on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                            "inner join rawat_jl_drpr on rawat_jl_drpr.no_rawat=reg_periksa.no_rawat "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join jns_perawatan on rawat_jl_drpr.kd_jenis_prw=jns_perawatan.kd_jenis_prw "+
                            "inner join dokter on rawat_jl_drpr.kd_dokter=dokter.kd_dokter "+
                            "inner join poliklinik on reg_periksa.kd_poli=poliklinik.kd_poli "+
@@ -4237,11 +4252,11 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                     menejemen=menejemen+rs.getDouble("menejemen");
                     total=total+rs.getDouble("biaya_rawat");
                     tabModeRalanDokterParamedis.addRow(new Object[]{
-                        i,rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),
-                        rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),
-                        rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),
-                        rs.getString(13),rs.getDouble(14),rs.getDouble(15),rs.getDouble(16),
-                        rs.getDouble(17),rs.getDouble(18),rs.getDouble(19),rs.getDouble(20)
+                        i,rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),
+                        rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),
+                        rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),
+                        rs.getString(14),rs.getDouble(15),rs.getDouble(16),rs.getDouble(17),
+                        rs.getDouble(18),rs.getDouble(19),rs.getDouble(20),rs.getDouble(21)
                     });
                     i++;
                 }
@@ -4271,7 +4286,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         try{
             if(KdOperatorOperasi.getText().equals("")&&NmOperatorOperasi.getText().equals("")&&KdAsistenOperasi.getText().equals("")&&NmAsistenOperasi.getText().equals("")&&KdCaraBayarOperasi.getText().equals("")&&NmCaraBayarOperasi.getText().equals("")&&TCari.getText().equals("")&&cmbStatus.getSelectedItem().equals("Semua")){
                 ps=koneksi.prepareStatement(
-                       "select operasi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                       "select operasi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                        "operasi.kode_paket,paket_operasi.nm_perawatan,operasi.tgl_operasi, "+
                        "penjab.png_jawab,if(operasi.status='Ralan',(select nm_poli from poliklinik where poliklinik.kd_poli=reg_periksa.kd_poli),"+
                        "(select bangsal.nm_bangsal from kamar_inap inner join kamar inner join bangsal on kamar_inap.kd_kamar=kamar.kd_kamar "+
@@ -4302,6 +4317,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                        "operasi.biayaalat,operasi.biayasewaok,operasi.akomodasi,operasi.bagian_rs,operasi.biayasarpras "+
                        "from operasi inner join reg_periksa on operasi.no_rawat=reg_periksa.no_rawat "+
                        "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                       "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                        "inner join paket_operasi on operasi.kode_paket=paket_operasi.kode_paket "+
                        "inner join penjab on reg_periksa.kd_pj=penjab.kd_pj "+
                        "inner join dokter as operator1 on operator1.kd_dokter=operasi.operator1 "+
@@ -4320,7 +4336,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else{
                 if(cmbStatus.getSelectedItem().equals("Semua")){
                     ps=koneksi.prepareStatement(
-                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "operasi.kode_paket,paket_operasi.nm_perawatan,operasi.tgl_operasi, "+
                            "penjab.png_jawab,if(operasi.status='Ralan',(select nm_poli from poliklinik where poliklinik.kd_poli=reg_periksa.kd_poli),"+
                            "(select bangsal.nm_bangsal from kamar_inap inner join kamar inner join bangsal on kamar_inap.kd_kamar=kamar.kd_kamar "+
@@ -4351,6 +4367,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "operasi.biayaalat,operasi.biayasewaok,operasi.akomodasi,operasi.bagian_rs,operasi.biayasarpras "+
                            "from operasi inner join reg_periksa on operasi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join paket_operasi on operasi.kode_paket=paket_operasi.kode_paket "+
                            "inner join penjab on reg_periksa.kd_pj=penjab.kd_pj "+
                            "inner join dokter as operator1 on operator1.kd_dokter=operasi.operator1 "+
@@ -4386,7 +4403,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "order by operasi.no_rawat desc");    
                 }else if(cmbStatus.getSelectedItem().equals("Piutang Belum Lunas")){
                     ps=koneksi.prepareStatement(
-                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "operasi.kode_paket,paket_operasi.nm_perawatan,operasi.tgl_operasi, "+
                            "penjab.png_jawab,if(operasi.status='Ralan',(select nm_poli from poliklinik where poliklinik.kd_poli=reg_periksa.kd_poli),"+
                            "(select bangsal.nm_bangsal from kamar_inap inner join kamar inner join bangsal on kamar_inap.kd_kamar=kamar.kd_kamar "+
@@ -4417,6 +4434,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "operasi.biayaalat,operasi.biayasewaok,operasi.akomodasi,operasi.bagian_rs,operasi.biayasarpras "+
                            "from operasi inner join reg_periksa on operasi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join paket_operasi on operasi.kode_paket=paket_operasi.kode_paket "+
                            "inner join penjab on reg_periksa.kd_pj=penjab.kd_pj "+
                            "inner join dokter as operator1 on operator1.kd_dokter=operasi.operator1 "+
@@ -4453,7 +4471,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "order by operasi.no_rawat desc");
                 }else if(cmbStatus.getSelectedItem().equals("Piutang Sudah Lunas")){
                     ps=koneksi.prepareStatement(
-                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "operasi.kode_paket,paket_operasi.nm_perawatan,operasi.tgl_operasi, "+
                            "penjab.png_jawab,if(operasi.status='Ralan',(select nm_poli from poliklinik where poliklinik.kd_poli=reg_periksa.kd_poli),"+
                            "(select bangsal.nm_bangsal from kamar_inap inner join kamar inner join bangsal on kamar_inap.kd_kamar=kamar.kd_kamar "+
@@ -4484,6 +4502,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "operasi.biayaalat,operasi.biayasewaok,operasi.akomodasi,operasi.bagian_rs,operasi.biayasarpras "+
                            "from operasi inner join reg_periksa on operasi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join paket_operasi on operasi.kode_paket=paket_operasi.kode_paket "+
                            "inner join penjab on reg_periksa.kd_pj=penjab.kd_pj "+
                            "inner join dokter as operator1 on operator1.kd_dokter=operasi.operator1 "+
@@ -4520,7 +4539,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "order by operasi.no_rawat desc");
                 }else if(cmbStatus.getSelectedItem().equals("Sudah Bayar Non Piutang")){
                     ps=koneksi.prepareStatement(
-                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "operasi.kode_paket,paket_operasi.nm_perawatan,operasi.tgl_operasi, "+
                            "penjab.png_jawab,if(operasi.status='Ralan',(select nm_poli from poliklinik where poliklinik.kd_poli=reg_periksa.kd_poli),"+
                            "(select bangsal.nm_bangsal from kamar_inap inner join kamar inner join bangsal on kamar_inap.kd_kamar=kamar.kd_kamar "+
@@ -4551,6 +4570,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "operasi.biayaalat,operasi.biayasewaok,operasi.akomodasi,operasi.bagian_rs,operasi.biayasarpras "+
                            "from operasi inner join reg_periksa on operasi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join paket_operasi on operasi.kode_paket=paket_operasi.kode_paket "+
                            "inner join penjab on reg_periksa.kd_pj=penjab.kd_pj "+
                            "inner join dokter as operator1 on operator1.kd_dokter=operasi.operator1 "+
@@ -4586,7 +4606,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "order by operasi.no_rawat desc");
                 }else if(cmbStatus.getSelectedItem().equals("Belum Terclosing Kasir")){
                     ps=koneksi.prepareStatement(
-                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select operasi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "operasi.kode_paket,paket_operasi.nm_perawatan,operasi.tgl_operasi, "+
                            "penjab.png_jawab,if(operasi.status='Ralan',(select nm_poli from poliklinik where poliklinik.kd_poli=reg_periksa.kd_poli),"+
                            "(select bangsal.nm_bangsal from kamar_inap inner join kamar inner join bangsal on kamar_inap.kd_kamar=kamar.kd_kamar "+
@@ -4617,6 +4637,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "operasi.biayaalat,operasi.biayasewaok,operasi.akomodasi,operasi.bagian_rs,operasi.biayasarpras "+
                            "from operasi inner join reg_periksa on operasi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join paket_operasi on operasi.kode_paket=paket_operasi.kode_paket "+
                            "inner join penjab on reg_periksa.kd_pj=penjab.kd_pj "+
                            "inner join dokter as operator1 on operator1.kd_dokter=operasi.operator1 "+
@@ -4818,7 +4839,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                           rs.getDouble("biaya_dokter_pjanak")+rs.getDouble("biaya_dokter_umum")+rs.getDouble("biayaalat")+
                           rs.getDouble("biayasewaok")+rs.getDouble("akomodasi")+rs.getDouble("bagian_rs")+rs.getDouble("biayasarpras");
                     tabModeOperasi.addRow(new Object[]{
-                        i,rs.getString("no_rawat"),rs.getString("no_rkm_medis"),
+                        i,rs.getString("no_rawat"),rs.getString("no_rkm_medis"),rs.getString("no_sep"),
                         rs.getString("nm_pasien"),rs.getString("kode_paket"),
                         rs.getString("nm_perawatan"),rs.getString("tgl_operasi").substring(0,10),
                         rs.getString("tgl_operasi").substring(11,19),rs.getString("png_jawab"),
@@ -4861,7 +4882,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                 }
                 if(total>0){
                     tabModeOperasi.addRow(new Object[]{
-                        "","","","","","","","","","Jumlah Total :","",biayaoperator1,
+                        "","","","","","","","","","","Jumlah Total :","",biayaoperator1,
                         "",biayaoperator2,"",biayaoperator3,"",biayaasisten_operator1,
                         "",biayaasisten_operator2,"",biayaasisten_operator3,
                         "",biayainstrumen,"",biayadokter_anak,"",biayaperawaat_resusitas,
@@ -5626,7 +5647,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         try{
             if(KdDokterPerujukRad.getText().equals("")&&NmDokterPerujukRad.getText().equals("")&&KdPetugasRad.getText().equals("")&&NmPetugasRad.getText().equals("")&&KdCaraBayarRad.getText().equals("")&&NmCaraBayarRad.getText().equals("")&&TCari.getText().equals("")&&cmbStatus.getSelectedItem().equals("Semua")){
                 ps=koneksi.prepareStatement(
-                       "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                       "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                        "periksa_radiologi.kd_jenis_prw,jns_perawatan_radiologi.nm_perawatan, "+
                        "periksa_radiologi.kd_dokter,dokter.nm_dokter,periksa_radiologi.nip,"+
                        "petugas.nama,periksa_radiologi.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -5639,6 +5660,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                        "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_radiologi.no_rawat limit 1 )) as ruangan "+
                        "from periksa_radiologi inner join reg_periksa on periksa_radiologi.no_rawat=reg_periksa.no_rawat "+
                        "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                       "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                        "inner join dokter on periksa_radiologi.kd_dokter=dokter.kd_dokter "+
                        "inner join dokter as perujuk on periksa_radiologi.dokter_perujuk=perujuk.kd_dokter "+
                        "inner join petugas on periksa_radiologi.nip=petugas.nip "+
@@ -5648,7 +5670,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
             }else{
                 if(cmbStatus.getSelectedItem().equals("Semua")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_radiologi.kd_jenis_prw,jns_perawatan_radiologi.nm_perawatan, "+
                            "periksa_radiologi.kd_dokter,dokter.nm_dokter,periksa_radiologi.nip,"+
                            "petugas.nama,periksa_radiologi.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -5661,6 +5683,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_radiologi.no_rawat limit 1 )) as ruangan "+
                            "from periksa_radiologi inner join reg_periksa on periksa_radiologi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_radiologi.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_radiologi.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_radiologi.nip=petugas.nip "+
@@ -5681,7 +5704,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            " order by periksa_radiologi.tgl_periksa");
                 }else if(cmbStatus.getSelectedItem().equals("Piutang Belum Lunas")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_radiologi.kd_jenis_prw,jns_perawatan_radiologi.nm_perawatan, "+
                            "periksa_radiologi.kd_dokter,dokter.nm_dokter,periksa_radiologi.nip,"+
                            "petugas.nama,periksa_radiologi.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -5694,6 +5717,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_radiologi.no_rawat limit 1 )) as ruangan "+
                            "from periksa_radiologi inner join reg_periksa on periksa_radiologi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_radiologi.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_radiologi.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_radiologi.nip=petugas.nip "+
@@ -5715,7 +5739,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            " order by periksa_radiologi.tgl_periksa");
                 }else if(cmbStatus.getSelectedItem().equals("Piutang Sudah Lunas")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_radiologi.kd_jenis_prw,jns_perawatan_radiologi.nm_perawatan, "+
                            "periksa_radiologi.kd_dokter,dokter.nm_dokter,periksa_radiologi.nip,"+
                            "petugas.nama,periksa_radiologi.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -5728,6 +5752,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_radiologi.no_rawat limit 1 )) as ruangan "+
                            "from periksa_radiologi inner join reg_periksa on periksa_radiologi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_radiologi.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_radiologi.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_radiologi.nip=petugas.nip "+
@@ -5749,7 +5774,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            " order by periksa_radiologi.tgl_periksa");
                 }else if(cmbStatus.getSelectedItem().equals("Sudah Bayar Non Piutang")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_radiologi.kd_jenis_prw,jns_perawatan_radiologi.nm_perawatan, "+
                            "periksa_radiologi.kd_dokter,dokter.nm_dokter,periksa_radiologi.nip,"+
                            "petugas.nama,periksa_radiologi.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -5762,6 +5787,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_radiologi.no_rawat limit 1 )) as ruangan "+
                            "from periksa_radiologi inner join reg_periksa on periksa_radiologi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_radiologi.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_radiologi.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_radiologi.nip=petugas.nip "+
@@ -5782,7 +5808,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            " order by periksa_radiologi.tgl_periksa");
                 }else if(cmbStatus.getSelectedItem().equals("Belum Terclosing Kasir")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_radiologi.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_radiologi.kd_jenis_prw,jns_perawatan_radiologi.nm_perawatan, "+
                            "periksa_radiologi.kd_dokter,dokter.nm_dokter,periksa_radiologi.nip,"+
                            "petugas.nama,periksa_radiologi.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -5795,6 +5821,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_radiologi.no_rawat limit 1 )) as ruangan "+
                            "from periksa_radiologi inner join reg_periksa on periksa_radiologi.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_radiologi.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_radiologi.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_radiologi.nip=petugas.nip "+
@@ -5910,7 +5937,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                     menejemen=menejemen+rs.getDouble("menejemen");
                     total=total+rs.getDouble("biaya");
                     tabModeRadiologi.addRow(new Object[]{
-                        i,rs.getString("no_rawat"),rs.getString("no_rkm_medis"),
+                        i,rs.getString("no_rawat"),rs.getString("no_rkm_medis"),rs.getString("no_sep"),
                         rs.getString("nm_pasien"),rs.getString("kd_jenis_prw"),
                         rs.getString("nm_perawatan"),rs.getString("kd_dokter"),
                         rs.getString("nm_dokter"),rs.getString("nip"),rs.getString("nama"),
@@ -5925,7 +5952,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                 }
                 if(total>0){
                     tabModeRadiologi.addRow(new Object[]{
-                        "","","","","","","","","","","","","","","","Jumlah Total :",
+                        "","","","","","","","","","","","","","","","","Jumlah Total :",
                         material,bhp,jmdokter,jmpetugas,jmperujuk,kso,menejemen,total
                     });
                 }
@@ -5949,7 +5976,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
         try{
             if(KdDokterPerujukLab.getText().equals("")&&NmDokterPerujukLab.getText().equals("")&&KdPetugasLab.getText().equals("")&&NmPetugasLab.getText().equals("")&&KdCaraBayarLab.getText().equals("")&&NmCaraBayarLab.getText().equals("")&&TCari.getText().equals("")&&cmbStatus.getSelectedItem().equals("Semua")){
                 ps=koneksi.prepareStatement(
-                       "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                       "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                        "periksa_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan, "+
                        "periksa_lab.kd_dokter,dokter.nm_dokter,periksa_lab.nip,"+
                        "petugas.nama,periksa_lab.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -5962,6 +5989,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                        "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_lab.no_rawat limit 1 )) as ruangan "+
                        "from periksa_lab inner join reg_periksa on periksa_lab.no_rawat=reg_periksa.no_rawat "+
                        "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                       "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                        "inner join dokter on periksa_lab.kd_dokter=dokter.kd_dokter "+
                        "inner join dokter as perujuk on periksa_lab.dokter_perujuk=perujuk.kd_dokter "+
                        "inner join petugas on periksa_lab.nip=petugas.nip "+
@@ -5984,6 +6012,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_lab.no_rawat limit 1 )) as ruangan "+
                            "from periksa_lab inner join reg_periksa on periksa_lab.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_lab.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_lab.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_lab.nip=petugas.nip "+
@@ -6004,7 +6033,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            " order by periksa_lab.tgl_periksa");
                 }else if(cmbStatus.getSelectedItem().equals("Piutang Belum Lunas")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan, "+
                            "periksa_lab.kd_dokter,dokter.nm_dokter,periksa_lab.nip,"+
                            "petugas.nama,periksa_lab.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -6017,6 +6046,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_lab.no_rawat limit 1 )) as ruangan "+
                            "from periksa_lab inner join reg_periksa on periksa_lab.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_lab.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_lab.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_lab.nip=petugas.nip "+
@@ -6038,7 +6068,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            " order by periksa_lab.tgl_periksa");
                 }else if(cmbStatus.getSelectedItem().equals("Piutang Sudah Lunas")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan, "+
                            "periksa_lab.kd_dokter,dokter.nm_dokter,periksa_lab.nip,"+
                            "petugas.nama,periksa_lab.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -6051,6 +6081,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_lab.no_rawat limit 1 )) as ruangan "+
                            "from periksa_lab inner join reg_periksa on periksa_lab.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+        
                            "inner join dokter on periksa_lab.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_lab.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_lab.nip=petugas.nip "+
@@ -6072,7 +6103,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            " order by periksa_lab.tgl_periksa");
                 }else if(cmbStatus.getSelectedItem().equals("Sudah Bayar Non Piutang")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan, "+
                            "periksa_lab.kd_dokter,dokter.nm_dokter,periksa_lab.nip,"+
                            "petugas.nama,periksa_lab.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -6085,6 +6116,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_lab.no_rawat limit 1 )) as ruangan "+
                            "from periksa_lab inner join reg_periksa on periksa_lab.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_lab.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_lab.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_lab.nip=petugas.nip "+
@@ -6105,7 +6137,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            " order by periksa_lab.tgl_periksa");
                 }else if(cmbStatus.getSelectedItem().equals("Belum Terclosing Kasir")){
                     ps=koneksi.prepareStatement(
-                           "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien, "+
+                           "select periksa_lab.no_rawat,reg_periksa.no_rkm_medis,bridging_sep.no_sep,pasien.nm_pasien, "+
                            "periksa_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan, "+
                            "periksa_lab.kd_dokter,dokter.nm_dokter,periksa_lab.nip,"+
                            "petugas.nama,periksa_lab.dokter_perujuk,perujuk.nm_dokter as perujuk,"+
@@ -6118,6 +6150,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                            "and kamar.kd_bangsal=bangsal.kd_bangsal where kamar_inap.no_rawat=periksa_lab.no_rawat limit 1 )) as ruangan "+
                            "from periksa_lab inner join reg_periksa on periksa_lab.no_rawat=reg_periksa.no_rawat "+
                            "inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
+                           "inner join bridging_sep on reg_periksa.no_rawat=bridging_sep.no_rawat "+
                            "inner join dokter on periksa_lab.kd_dokter=dokter.kd_dokter "+
                            "inner join dokter as perujuk on periksa_lab.dokter_perujuk=perujuk.kd_dokter "+
                            "inner join petugas on periksa_lab.nip=petugas.nip "+
@@ -6232,7 +6265,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                     menejemen=menejemen+rs.getDouble("menejemen");
                     total=total+rs.getDouble("biaya");
                     tabModeLaborat.addRow(new Object[]{
-                        i,rs.getString("no_rawat"),rs.getString("no_rkm_medis"),
+                        i,rs.getString("no_rawat"),rs.getString("no_rkm_medis"),rs.getString("no_sep"),
                         rs.getString("nm_pasien"),rs.getString("kd_jenis_prw"),
                         rs.getString("nm_perawatan"),rs.getString("kd_dokter"),
                         rs.getString("nm_dokter"),rs.getString("nip"),rs.getString("nama"),
@@ -6247,7 +6280,7 @@ public final class DlgDetailTindakan extends javax.swing.JDialog {
                 }
                 if(total>0){
                     tabModeLaborat.addRow(new Object[]{
-                        "","","","","","","","","","","","","","","","Jumlah Total :",
+                        "","","","","","","","","","","","","","","","","Jumlah Total :",
                         material,bhp,jmdokter,jmpetugas,jmperujuk,kso,menejemen,total
                     });
                 }
