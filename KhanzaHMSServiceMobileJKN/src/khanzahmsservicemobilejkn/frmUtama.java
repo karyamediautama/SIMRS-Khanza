@@ -1619,7 +1619,7 @@ public class frmUtama extends javax.swing.JFrame {
                                                     if(Sequel.menyimpantf2("referensi_mobilejkn_bpjs_taskid","?,?,?","task id",3,new String[]{rs.getString("no_rawat"),"1",datajam})==true){
                                                         parsedDate = dateFormat.parse(datajam);
                                                         try {     
-                                                            TeksArea.append("Menjalankan WS taskid mulai admisi Non Mobile JKN / Pasien Non BPJS/BPS Onsite\n");
+                                                            TeksArea.append("Menjalankan WS taskid mulai admisi Non Mobile JKN / Pasien Non BPJS/BPJS Onsite\n");
                                                             headers = new HttpHeaders();
                                                             headers.setContentType(MediaType.APPLICATION_JSON);
                                                             headers.add("x-cons-id",koneksiDB.CONSIDAPIMOBILEJKN());
@@ -1660,7 +1660,7 @@ public class frmUtama extends javax.swing.JFrame {
                                                     if(Sequel.menyimpantf2("referensi_mobilejkn_bpjs_taskid","?,?,?","task id",3,new String[]{rs.getString("no_rawat"),"2",datajam})==true){
                                                         parsedDate = dateFormat.parse(datajam);
                                                         try {     
-                                                            TeksArea.append("Menjalankan WS taskid selesai admisi Non Mobile JKN / Pasien Non BPJS/BPS Onsite\n");
+                                                            TeksArea.append("Menjalankan WS taskid selesai admisi Non Mobile JKN / Pasien Non BPJS/BPJS Onsite\n");
                                                             headers = new HttpHeaders();
                                                             headers.setContentType(MediaType.APPLICATION_JSON);
                                                             headers.add("x-cons-id",koneksiDB.CONSIDAPIMOBILEJKN());
