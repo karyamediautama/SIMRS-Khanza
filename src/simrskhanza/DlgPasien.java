@@ -1615,6 +1615,7 @@ public class DlgPasien extends javax.swing.JDialog {
         ppCatatanPasien = new javax.swing.JMenuItem();
         ppGabungRM = new javax.swing.JMenuItem();
         ppPasienCorona = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         buttonGroup1 = new javax.swing.ButtonGroup();
         Kd2 = new widget.TextBox();
         DlgDemografi = new javax.swing.JDialog();
@@ -2691,6 +2692,10 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         jPopupMenu1.add(ppPasienCorona);
+
+        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.setName("jMenuItem1"); // NOI18N
+        jPopupMenu1.add(jMenuItem1);
 
         Kd2.setName("Kd2"); // NOI18N
         Kd2.setPreferredSize(new java.awt.Dimension(207, 23));
@@ -8980,6 +8985,7 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
     private widget.Label jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;

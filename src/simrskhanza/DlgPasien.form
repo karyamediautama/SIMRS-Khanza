@@ -1475,6 +1475,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ppPasienCoronaBtnPrintActionPerformed"/>
           </Events>
         </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jMenuItem1"/>
+            <Property name="name" type="java.lang.String" value="jMenuItem1" noResource="true"/>
+          </Properties>
+        </MenuItem>
       </SubComponents>
     </Container>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
@@ -2794,7 +2800,7 @@
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="1">
-                                <StringItem index="0" value="14-09-2023"/>
+                                <StringItem index="0" value="10-12-2023"/>
                               </StringArray>
                             </Property>
                             <Property name="displayFormat" type="java.lang.String" value="dd-MM-yyyy"/>
@@ -3014,7 +3020,7 @@
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                               <StringArray count="1">
-                                <StringItem index="0" value="14-09-2023"/>
+                                <StringItem index="0" value="10-12-2023"/>
                               </StringArray>
                             </Property>
                             <Property name="displayFormat" type="java.lang.String" value="dd-MM-yyyy"/>
