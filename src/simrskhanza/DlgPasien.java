@@ -1554,6 +1554,7 @@ public class DlgPasien extends javax.swing.JDialog {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
         MnIdentitasPasienUtama = new javax.swing.JMenuItem();
+        MnIdentitasPasienSecondary = new javax.swing.JMenuItem();
         KartuPasien = new javax.swing.JMenu();
         MnKartu1 = new javax.swing.JMenuItem();
         MnKartu2 = new javax.swing.JMenuItem();
@@ -1851,6 +1852,14 @@ public class DlgPasien extends javax.swing.JDialog {
             }
         });
         jPopupMenu1.add(MnIdentitasPasienUtama);
+
+        MnIdentitasPasienSecondary.setBackground(new java.awt.Color(250, 250, 250));
+        MnIdentitasPasienSecondary.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        MnIdentitasPasienSecondary.setForeground(new java.awt.Color(50, 50, 50));
+        MnIdentitasPasienSecondary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
+        MnIdentitasPasienSecondary.setText("Identitas Pasien Kedua");
+        MnIdentitasPasienSecondary.setName("MnIdentitasPasienSecondary"); // NOI18N
+        jPopupMenu1.add(MnIdentitasPasienSecondary);
 
         KartuPasien.setForeground(new java.awt.Color(50, 50, 50));
         KartuPasien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
@@ -8880,6 +8889,7 @@ private void KabupatenMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
     private javax.swing.JMenuItem MnIdentitas4;
     private javax.swing.JMenuItem MnIdentitasPasien;
     private javax.swing.JMenuItem MnIdentitasPasienKedua;
+    private javax.swing.JMenuItem MnIdentitasPasienSecondary;
     private javax.swing.JMenuItem MnIdentitasPasienUtama;
     private javax.swing.JMenuItem MnKartu1;
     private javax.swing.JMenuItem MnKartu2;
